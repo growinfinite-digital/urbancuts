@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ========================================================================
+     URBAN CUTS — Premium Family Salon, Baner, Pune
+     Single-file production build. Sections are clearly commented below to
+     allow future insertion of new sections without restructuring the page.
+     ======================================================================== -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ============================ SEO META ================================ -->
+<title>Urban Cuts | Premium Family Salon in Baner, Pune | Book Appointment</title>
+<meta name="description" content="Urban Cuts is Baner's premium family salon for hair, skin, grooming &amp; makeup. Rated 5.0 by 141+ Google reviewers. Serving Baner, Balewadi, Pashan, Aundh &amp; Sus. Book your appointment today.">
+<meta name="keywords" content="salon in baner, family salon pune, hair salon baner, men's grooming baner, women's salon balewadi, premium salon pashan">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Urban Cuts">
+<link rel="canonical" href="https://www.urbancuts.example/">
+
+<!-- ============================ OPEN GRAPH =============================== -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Urban Cuts | Premium Family Salon in Baner, Pune">
+<meta property="og:description" content="A luxury family salon experience in Baner — hair, skin, grooming &amp; makeup. 5.0★ across 141 Google reviews. Book your appointment today.">
+<meta property="og:url" content="https://www.urbancuts.example/">
+<meta property="og:site_name" content="Urban Cuts">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://www.urbancuts.example/assets/og-cover.jpg">
+
+<!-- ============================ TWITTER CARD ============================= -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Urban Cuts | Premium Family Salon in Baner, Pune">
+<meta name="twitter:description" content="A luxury family salon experience in Baner — hair, skin, grooming &amp; makeup. 5.0★ across 141 Google reviews.">
+<meta name="twitter:image" content="https://www.urbancuts.example/assets/og-cover.jpg">
+
+<!-- ============================ FAVICON (inline, no extra file) ========== -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23171410'/%3E%3Ctext x='50' y='66' font-family='Georgia,serif' font-size='54' fill='%23C6A25D' text-anchor='middle'%3EU%3C/text%3E%3C/svg%3E">
+
+<!-- ============================ FONTS ===================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============================ LOCALBUSINESS JSON-LD ==================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Urban Cuts",
+  "image": "https://www.urbancuts.example/assets/og-cover.jpg",
+  "url": "https://www.urbancuts.example/",
+  "telephone": "+91-88620-70100",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop 10, Nancy Hill View, Baner Annex",
+    "addressLocality": "Baner, Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411045",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "18.5679",
+    "longitude": "73.7797"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "141"
+  },
+  "areaServed": ["Baner", "Balewadi", "Pashan", "Aundh", "Sus", "Mahalunge"],
+  "sameAs": []
+}
+</script>
+
+<style>
+/* =========================================================================
+   0. DESIGN TOKENS
+   ========================================================================= */
+:root{
+  --ink:            #18140F;
+  --ink-soft:       #4A4339;
+  --white:          #FFFFFF;
+  --beige:          #F4EEE1;
+  --beige-dark:     #E8DEC8;
+  --gold:           #C6A25D;
+  --gold-light:     #E7D2A0;
+  --gold-dark:      #8F7237;
+  --whatsapp:       #25D366;
+  --whatsapp-dark:  #1DAE55;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body:    "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 10px 40px rgba(24,20,15,0.08);
+  --shadow-lift: 0 24px 60px rgba(24,20,15,0.14);
+
+  --container: 1180px;
+  --section-pad: clamp(64px, 9vw, 128px);
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+body{
+  margin:0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--beige);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, svg{ display:block; max-width:100%; }
+a{ color: inherit; text-decoration: none; }
+button{ font-family: inherit; cursor: pointer; }
+ul{ margin:0; padding:0; list-style:none; }
+
+.container{
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section{ position: relative; }
+
+h1,h2,h3,h4{
+  font-family: var(--font-display);
+  font-weight: 450;
+  line-height: 1.08;
+  margin: 0;
+  color: var(--ink);
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+.eyebrow::before{
+  content:"";
+  width: 26px; height: 1px;
+  background: var(--gold);
+}
+
+.section-head{
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+.section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+.section-head h2{ font-size: clamp(30px, 4vw, 44px); margin-top: 14px; }
+.section-head p{ margin-top: 16px; color: var(--ink-soft); font-size: 16.5px; line-height: 1.7; }
+
+/* gold-thread underline flourish, used on select headings */
+.thread-underline{
+  display:block;
+  width: 84px;
+  height: 10px;
+  margin-top: 18px;
+}
+.section-head.center .thread-underline{ margin-left:auto; margin-right:auto; }
+
+/* Buttons ---------------------------------------------------------------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: 16px 30px;
+  border-radius: var(--radius-pill);
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s ease, background .3s ease, color .3s ease;
+  white-space: nowrap;
+}
+.btn:focus-visible{ outline: 3px solid var(--gold-dark); outline-offset: 3px; }
+.btn-primary{
+  background: var(--ink);
+  color: var(--beige);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover{ background: var(--gold-dark); color:#fff; transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+
+.btn-gold{
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: var(--ink);
+}
+.btn-gold:hover{ transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+
+.btn-outline{
+  background: transparent;
+  border-color: rgba(24,20,15,0.25);
+  color: var(--ink);
+}
+.btn-outline:hover{ border-color: var(--ink); background: rgba(24,20,15,0.04); }
+
+.btn-whatsapp{
+  background: var(--whatsapp);
+  color:#fff;
+}
+.btn-whatsapp:hover{ background: var(--whatsapp-dark); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+
+.btn-sm{ padding: 11px 22px; font-size: 12.5px; }
+
+/* =========================================================================
+   1. NAVIGATION
+   ========================================================================= */
+.site-nav{
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: rgba(244,238,225,0.86);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(24,20,15,0.08);
+  transition: box-shadow .3s ease;
+}
+.site-nav.is-scrolled{ box-shadow: 0 6px 30px rgba(24,20,15,0.07); }
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 16px 24px;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.nav-logo{
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  display:flex;
+  align-items:baseline;
+  gap: 8px;
+}
+.nav-logo span{ color: var(--gold-dark); font-style: italic; font-weight:450; font-size: 14px; }
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap: 34px;
+}
+.nav-links a{
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 6px 0;
+}
+.nav-links a::after{
+  content:"";
+  position:absolute; left:0; bottom:0;
+  width:0; height:2px;
+  background: var(--gold);
+  transition: width .3s ease;
+}
+.nav-links a:hover::after, .nav-links a:focus-visible::after{ width:100%; }
+
+.nav-cta{ display:flex; align-items:center; gap:12px; }
+
+.nav-toggle{
+  display:none;
+  width: 44px; height:44px;
+  border-radius: 50%;
+  border: 1px solid rgba(24,20,15,0.15);
+  background: transparent;
+  align-items:center; justify-content:center;
+}
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+  content:""; display:block;
+  width: 18px; height:2px;
+  background: var(--ink);
+  position:relative;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.nav-toggle span::before{ position:absolute; top:-6px; }
+.nav-toggle span::after{ position:absolute; top:6px; }
+.nav-toggle.open span{ background: transparent; }
+.nav-toggle.open span::before{ top:0; transform: rotate(45deg); background:var(--ink); }
+.nav-toggle.open span::after{ top:0; transform: rotate(-45deg); background:var(--ink); }
+
+@media (max-width: 860px){
+  .nav-links{
+    position:fixed; inset: 74px 0 0 0;
+    background: var(--beige);
+    flex-direction:column;
+    justify-content:flex-start;
+    padding: 40px 24px;
+    gap: 26px;
+    transform: translateX(100%);
+    transition: transform .4s cubic-bezier(.2,.7,.3,1);
+  }
+  .nav-links.open{ transform: translateX(0); }
+  .nav-links a{ font-size: 18px; }
+  .nav-cta .btn-outline{ display:none; }
+  .nav-toggle{ display:flex; }
+}
+
+/* =========================================================================
+   2. HERO SECTION
+   ========================================================================= */
+.hero{
+  padding: 56px 0 var(--section-pad);
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items:center;
+}
+.hero h1{
+  font-size: clamp(38px, 5.4vw, 66px);
+  margin-top: 18px;
+  letter-spacing: -0.01em;
+}
+.hero h1 em{ font-style: italic; color: var(--gold-dark); }
+.hero p.lede{
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 480px;
+}
+.hero-actions{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top: 34px;
+}
+.hero-meta{
+  display:flex;
+  align-items:center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap:wrap;
+}
+.hero-rating{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size: 14.5px;
+  font-weight:700;
+}
+.hero-rating .stars{ color: var(--gold-dark); letter-spacing: 2px; font-size:16px; }
+.hero-rating .muted{ color: var(--ink-soft); font-weight:600; }
+.hero-serving{
+  display:flex; gap:8px; flex-wrap:wrap;
+}
+.chip{
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  border: 1px solid rgba(24,20,15,0.08);
+  font-size: 12.5px;
+  font-weight:700;
+  letter-spacing:0.03em;
+}
+
+.hero-visual{
+  position:relative;
+}
+.hero-frame{
+  border-radius: var(--radius-lg);
+  overflow:hidden;
+  box-shadow: var(--shadow-lift);
+  aspect-ratio: 4/5;
+  position:relative;
+}
+.hero-badge{
+  position:absolute;
+  bottom: -22px; left: -22px;
+  background: var(--ink);
+  color: var(--beige);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-lift);
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.hero-badge strong{ font-family: var(--font-display); font-size: 26px; color: var(--gold-light); }
+.hero-badge span{ font-size: 11.5px; text-transform:uppercase; letter-spacing:0.08em; color: rgba(244,238,225,0.75); }
+
+@media (max-width: 940px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-visual{ order:-1; }
+  .hero-badge{ left: 16px; bottom:-18px; }
+}
+
+/* placeholder art panels (self-contained, no external images) ------------ */
+.art-panel{
+  width:100%; height:100%;
+  display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(155deg, #efe6cf, #d9c69a 55%, #b99a5c);
+  position:relative;
+}
+.art-panel svg{ width: 46%; height:46%; opacity:0.9; }
+.art-panel.dark{ background: linear-gradient(155deg, #26211a, #171410 60%, #0e0c09); }
+.art-panel.dark svg{ opacity:0.55; }
+
+/* =========================================================================
+   3. TRUST STATISTICS
+   ========================================================================= */
+.stats-bar{
+  background: var(--ink);
+  color: var(--beige);
+  padding: 44px 0;
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align:center;
+}
+.stats-grid .stat strong{
+  display:block;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 34px);
+  color: var(--gold-light);
+}
+.stats-grid .stat span{
+  display:block;
+  margin-top: 6px;
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(244,238,225,0.72);
+}
+@media (max-width: 720px){
+  .stats-grid{ grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
+}
+
+/* =========================================================================
+   4. WHY URBAN CUTS
+   ========================================================================= */
+.why-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.why-card{
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 30px 24px;
+  box-shadow: var(--shadow-soft);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.why-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+.why-icon{
+  width: 46px; height:46px;
+  border-radius: 50%;
+  background: var(--beige);
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom: 18px;
+}
+.why-icon svg{ width:22px; height:22px; stroke: var(--gold-dark); }
+.why-card h3{ font-family: var(--font-body); font-weight:800; font-size:15.5px; letter-spacing:0.01em; }
+.why-card p{ margin: 8px 0 0; font-size: 14px; color: var(--ink-soft); line-height:1.6; }
+
+@media (max-width: 980px){ .why-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){ .why-grid{ grid-template-columns: 1fr; } }
+
+/* =========================================================================
+   5. SERVICES
+   ========================================================================= */
+.services-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.service-card{
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-soft);
+  display:flex;
+  flex-direction:column;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.service-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+.service-icon{
+  width: 52px; height:52px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom: 20px;
+}
+.service-icon svg{ width:24px; height:24px; stroke: var(--ink); }
+.service-card h3{ font-family: var(--font-display); font-size: 22px; font-weight:450; }
+.service-card p{ margin: 10px 0 22px; font-size:14.5px; line-height:1.65; color: var(--ink-soft); flex-grow:1; }
+.service-card .btn{ align-self:flex-start; }
+
+@media (max-width: 980px){ .services-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px){ .services-grid{ grid-template-columns: 1fr; } }
+
+/* =========================================================================
+   6. THE URBAN CUTS EXPERIENCE — timeline w/ gold-thread signature
+   ========================================================================= */
+.experience{ background: var(--white); }
+.timeline{
+  position:relative;
+  margin-top: 30px;
+}
+.timeline-track{
+  position:absolute;
+  left: 27px; top: 12px; bottom: 12px;
+  width: 2px;
+  background: repeating-linear-gradient(to bottom, var(--gold) 0 6px, transparent 6px 12px);
+}
+.timeline-item{
+  position:relative;
+  display:flex;
+  gap: 28px;
+  padding: 0 0 44px 0;
+}
+.timeline-item:last-child{ padding-bottom: 0; }
+.timeline-dot{
+  flex: 0 0 56px;
+  height: 56px;
+  border-radius:50%;
+  background: var(--ink);
+  color: var(--gold-light);
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-display);
+  font-size: 20px;
+  z-index:1;
+  box-shadow: var(--shadow-soft);
+}
+.timeline-body{ padding-top: 8px; }
+.timeline-body h3{ font-family: var(--font-body); font-weight:800; font-size:17px; }
+.timeline-body p{ margin:6px 0 0; color: var(--ink-soft); font-size:14.5px; max-width: 480px; }
+
+/* =========================================================================
+   7. TRANSFORMATIONS GALLERY (masonry)
+   ========================================================================= */
+.gallery-grid{
+  columns: 4 220px;
+  column-gap: 18px;
+}
+.gallery-item{
+  break-inside: avoid;
+  margin-bottom: 18px;
+  border-radius: var(--radius-md);
+  overflow:hidden;
+  box-shadow: var(--shadow-soft);
+  position:relative;
+}
+.gallery-item .art-panel{ aspect-ratio: var(--ar, 1/1); }
+.gallery-item .tag{
+  position:absolute; left:14px; bottom:14px;
+  background: rgba(24,20,15,0.72);
+  color:#fff; font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
+  padding: 6px 12px; border-radius: var(--radius-pill);
+}
+@media (max-width: 900px){ .gallery-grid{ columns: 2 200px; } }
+@media (max-width: 520px){ .gallery-grid{ columns: 1 100%; } }
+
+/* =========================================================================
+   8. TEAM
+   ========================================================================= */
+.team-grid{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.team-card{
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow:hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.team-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+.team-card .art-panel{ aspect-ratio: 3/4; }
+.team-info{ padding: 18px 18px 22px; }
+.team-info h3{ font-family: var(--font-display); font-size:19px; font-weight:500; }
+.team-info .role{ font-size:12px; color: var(--gold-dark); font-weight:700; letter-spacing:0.04em; text-transform:uppercase; margin-top:4px; }
+.team-info .meta{ margin-top:10px; font-size:13px; color:var(--ink-soft); line-height:1.6; }
+@media (max-width: 1020px){ .team-grid{ grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px){ .team-grid{ grid-template-columns: repeat(2, 1fr); } }
+
+/* =========================================================================
+   9. WHY 800+ CLIENTS CHOOSE US
+   ========================================================================= */
+.choose-us{ background: var(--ink); color: var(--beige); }
+.choose-grid{
+  display:grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items:center;
+}
+.choose-grid .art-panel{ border-radius: var(--radius-lg); aspect-ratio: 4/5; box-shadow: var(--shadow-lift); }
+.choose-list{ display:grid; grid-template-columns: repeat(2,1fr); gap: 22px 28px; margin-top: 34px; }
+.choose-list li{ display:flex; gap:14px; align-items:flex-start; font-size:15px; line-height:1.6; }
+.choose-list li svg{ flex:0 0 20px; width:20px; height:20px; margin-top:3px; stroke: var(--gold-light); }
+.choose-us .section-head p{ color: rgba(244,238,225,0.75); }
+.choose-us .section-head h2{ color: var(--beige); }
+@media (max-width: 900px){
+  .choose-grid{ grid-template-columns: 1fr; }
+  .choose-grid .art-panel{ order:-1; max-width:360px; margin:0 auto; }
+  .choose-list{ grid-template-columns: 1fr; }
+}
+
+/* =========================================================================
+   10. GOOGLE REVIEWS
+   ========================================================================= */
+.reviews-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.review-card{
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+}
+.review-card .stars{ color: var(--gold-dark); letter-spacing:2px; font-size:15px; }
+.review-card p{ margin: 14px 0 18px; font-size:14.5px; line-height:1.7; color: var(--ink-soft); }
+.review-author{ display:flex; align-items:center; gap:12px; }
+.review-avatar{
+  width:40px; height:40px; border-radius:50%;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-display); font-weight:600; color: var(--ink);
+}
+.review-author .who strong{ display:block; font-size:13.5px; }
+.review-author .who span{ font-size:12px; color: var(--ink-soft); }
+@media (max-width: 980px){ .reviews-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px){ .reviews-grid{ grid-template-columns: 1fr; } }
+
+/* =========================================================================
+   11. FAQ ACCORDION
+   ========================================================================= */
+.faq-list{ max-width: 800px; margin: 0 auto; }
+.faq-item{
+  border-bottom: 1px solid rgba(24,20,15,0.12);
+}
+.faq-q{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 20px;
+  padding: 24px 4px;
+  background:none; border:none;
+  text-align:left;
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--ink);
+}
+.faq-q .plus{
+  flex:0 0 26px; height:26px;
+  border-radius:50%;
+  border: 1px solid var(--gold-dark);
+  position:relative;
+  transition: transform .3s ease, background .3s ease;
+}
+.faq-q .plus::before, .faq-q .plus::after{
+  content:"";
+  position:absolute; top:50%; left:50%;
+  background: var(--gold-dark);
+  transform: translate(-50%,-50%);
+}
+.faq-q .plus::before{ width:10px; height:1.6px; }
+.faq-q .plus::after{ width:1.6px; height:10px; transition: opacity .25s ease; }
+.faq-item.open .faq-q .plus{ background: var(--ink); transform: rotate(180deg); }
+.faq-item.open .faq-q .plus::before, .faq-item.open .faq-q .plus::after{ background: var(--gold-light); }
+.faq-item.open .faq-q .plus::after{ opacity:0; }
+
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition: max-height .4s cubic-bezier(.2,.7,.3,1);
+}
+.faq-a p{ padding: 0 4px 24px; margin:0; color: var(--ink-soft); font-size:14.5px; line-height:1.75; max-width:680px; }
+
+/* =========================================================================
+   12. CONTACT
+   ========================================================================= */
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items:stretch;
+}
+.contact-card{
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-soft);
+}
+.contact-row{ display:flex; gap:16px; margin-bottom:24px; }
+.contact-row .ico{
+  flex:0 0 44px; height:44px; border-radius:50%;
+  background: var(--beige);
+  display:flex; align-items:center; justify-content:center;
+}
+.contact-row .ico svg{ width:20px; height:20px; stroke: var(--gold-dark); }
+.contact-row h4{ font-family: var(--font-body); font-weight:800; font-size:14px; letter-spacing:0.03em; text-transform:uppercase; }
+.contact-row p{ margin:4px 0 0; color: var(--ink-soft); font-size:14.5px; line-height:1.65; }
+.contact-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-top: 30px; }
+.map-frame{
+  border-radius: var(--radius-lg);
+  overflow:hidden;
+  box-shadow: var(--shadow-soft);
+  min-height: 340px;
+}
+.map-frame iframe{ width:100%; height:100%; min-height:340px; border:0; display:block; }
+@media (max-width: 900px){ .contact-grid{ grid-template-columns: 1fr; } }
+
+/* =========================================================================
+   13. FOOTER
+   ========================================================================= */
+.site-footer{
+  background: var(--ink);
+  color: rgba(244,238,225,0.78);
+  padding: 68px 0 28px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 46px;
+  border-bottom: 1px solid rgba(244,238,225,0.14);
+}
+.footer-logo{
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--beige);
+}
+.footer-grid p{ margin-top:14px; font-size:14px; line-height:1.7; max-width:280px; }
+.footer-grid h5{ font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase; color: var(--gold-light); margin-bottom:16px; }
+.footer-grid ul li{ margin-bottom:10px; font-size:14px; }
+.footer-grid ul li a:hover{ color: var(--gold-light); }
+.footer-social{ display:flex; gap:10px; margin-top:16px; }
+.footer-social a{
+  width:38px; height:38px; border-radius:50%;
+  border: 1px solid rgba(244,238,225,0.25);
+  display:flex; align-items:center; justify-content:center;
+  transition: background .3s ease, border-color .3s ease;
+}
+.footer-social a:hover{ background: var(--gold); border-color: var(--gold); }
+.footer-social svg{ width:16px; height:16px; stroke: var(--beige); }
+.footer-bottom{
+  display:flex; justify-content:space-between; align-items:center;
+  padding-top: 26px;
+  font-size: 12.5px;
+  flex-wrap:wrap; gap:10px;
+  color: rgba(244,238,225,0.55);
+}
+@media (max-width: 860px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px){ .footer-grid{ grid-template-columns: 1fr; } }
+
+/* =========================================================================
+   FLOATING WHATSAPP BUTTON
+   ========================================================================= */
+.float-whatsapp{
+  position: fixed;
+  right: 22px; bottom: 22px;
+  z-index: 600;
+  width: 60px; height:60px;
+  border-radius:50%;
+  background: var(--whatsapp);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 12px 30px rgba(37,211,102,0.45);
+  animation: pulse-wa 2.6s ease-in-out infinite;
+}
+.float-whatsapp svg{ width:28px; height:28px; fill:#fff; }
+@keyframes pulse-wa{
+  0%, 100%{ box-shadow: 0 12px 30px rgba(37,211,102,0.45); }
+  50%{ box-shadow: 0 12px 34px rgba(37,211,102,0.7); }
+}
+
+/* =========================================================================
+   SCROLL-REVEAL (Intersection Observer driven)
+   ========================================================================= */
+.reveal{
+  opacity:0;
+  transform: translateY(28px);
+  transition: opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.in-view{ opacity:1; transform:none; }
+.reveal-stagger.in-view > *{ transition-delay: calc(var(--i,0) * 90ms); }
+
+/* skip link for accessibility */
+.skip-link{
+  position:absolute; left:-999px; top:auto;
+  background: var(--ink); color: var(--beige);
+  padding: 12px 20px; border-radius: var(--radius-sm);
+  z-index: 1000;
+}
+.skip-link:focus{ left: 16px; top: 16px; }
+
+section:focus{ outline:none; }
+:focus-visible{ outline: 3px solid var(--gold-dark); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- =========================================================================
+     NAVIGATION
+     ========================================================================= -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" aria-label="Urban Cuts home">URBAN CUTS <span>Baner</span></a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="tel:+918862070100" class="btn btn-outline btn-sm">Book Appointment</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- =========================================================================
+     HERO SECTION
+     ========================================================================= -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="reveal in-view">
+      <p class="eyebrow">Premium Family Salon · Baner, Pune</p>
+      <h1>Urban Cuts — <em>Luxury</em> Premium Family Salon in Baner</h1>
+      <p class="lede">A calm, elegant space for hair, skin and grooming — built for men, women and families who want a premium salon experience without the fuss. Certified stylists, personal consultations, and unhurried appointments.</p>
+
+      <div class="hero-actions">
+        <a href="tel:+918862070100" class="btn btn-gold">Book Appointment</a>
+        <a href="https://wa.me/918862070100?text=Hi%20Urban%20Cuts%2C%20I%27d%20like%20to%20book%20an%20appointment" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1s-1.4-.5-2.6-1.6c-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 8.6 9.5 7.4 9.3 7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.6 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hero-rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>5.0 Rating</span>
+          <span class="muted">· 141 Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="hero-serving" style="margin-top:16px;" aria-label="Areas served">
+        <span class="chip">Serving Baner</span>
+        <span class="chip">Balewadi</span>
+        <span class="chip">Pashan</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal in-view">
+      <div class="hero-frame">
+        <div class="art-panel dark" role="img" aria-label="Interior of Urban Cuts premium salon in Baner with elegant styling chairs">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E7D2A0" stroke-width="1.1"><path d="M6 4l6 16M18 4l-6 16M4 12h16"/></svg>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <strong>800+</strong>
+        <span>Happy Clients</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     TRUST STATISTICS
+     ========================================================================= -->
+<section class="stats-bar reveal reveal-stagger" aria-label="Trust statistics">
+  <div class="container stats-grid">
+    <div class="stat"><strong>5.0</strong><span>Google Rating</span></div>
+    <div class="stat"><strong>141</strong><span>Google Reviews</span></div>
+    <div class="stat"><strong>800+</strong><span>Happy Clients</span></div>
+    <div class="stat"><strong>Hair · Skin · Grooming</strong><span>Premium Services</span></div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     WHY URBAN CUTS
+     ========================================================================= -->
+<section id="about" style="padding: var(--section-pad) 0 0;">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Why Urban Cuts</p>
+      <h2>The details that make it premium</h2>
+      <p>Everything about the visit is designed around comfort, hygiene and time — the way a family salon should feel.</p>
+    </div>
+
+    <div class="why-grid reveal-stagger reveal">
+      <div class="why-card" style="--i:0"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Certified Professionals</h3><p>Trained, certified stylists across hair, skin and grooming.</p></div>
+
+      <div class="why-card" style="--i:1"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg></div><h3>Luxury Experience</h3><p>Boutique-hotel interiors, calm music, and unhurried service.</p></div>
+
+      <div class="why-card" style="--i:2"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M8 12h8M12 8v8M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Personalised Consultation</h3><p>Every visit begins with a one-on-one consult, not a rush.</p></div>
+
+      <div class="why-card" style="--i:3"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7z"/></svg></div><h3>Premium Hygiene</h3><p>Sanitised tools and single-use consumables for every guest.</p></div>
+
+      <div class="why-card" style="--i:4"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Minimal Waiting Time</h3><p>Appointment-first scheduling keeps your visit on time.</p></div>
+
+      <div class="why-card" style="--i:5"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M5 17h14M6 17V9a6 6 0 1112 0v8M9 21h6"/></svg></div><h3>Parking Available</h3><p>Dedicated parking right outside Nancy Hill View, Baner.</p></div>
+
+      <div class="why-card" style="--i:6"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 018-1 4 4 0 018 1c0 5.5-7 10-7 10z"/></svg></div><h3>Women Friendly</h3><p>A comfortable, private space designed with women in mind.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     PREMIUM SERVICES
+     ========================================================================= -->
+<section id="services" style="padding: var(--section-pad) 0;">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Premium Services</p>
+      <h2>Hair, skin &amp; grooming — done properly</h2>
+      <p>A complete menu for the whole family, from a quick trim to a full bridal look.</p>
+    </div>
+
+    <!-- data-driven markup: add a new .service-card to extend the menu without touching layout CSS -->
+    <div class="services-grid reveal-stagger reveal">
+
+      <article class="service-card" style="--i:0">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M6 4l6 16M18 4l-6 16M4 12h16"/></svg></div>
+        <h3>Hair</h3>
+        <p>Precision cuts and styling for men, women and kids, tailored to face shape and lifestyle.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+      <article class="service-card" style="--i:1">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3c-2 3-6 6-6 10a6 6 0 0012 0c0-4-4-7-6-10z"/></svg></div>
+        <h3>Hair Treatments</h3>
+        <p>Keratin, spa and repair treatments to restore strength, shine and softness.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+      <article class="service-card" style="--i:2">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+        <h3>Hair Colour</h3>
+        <p>Global colour, balayage and root touch-ups using ammonia-conscious formulas.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+      <article class="service-card" style="--i:3">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zM8 12h8"/></svg></div>
+        <h3>Skin Care</h3>
+        <p>Facials, cleanups and de-tan treatments suited to Pune's climate and skin type.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+      <article class="service-card" style="--i:4">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M7 11V7a2 2 0 114 0v3M11 11V6a2 2 0 114 0v5M15 11V8a2 2 0 114 0v7a5 5 0 01-5 5H10a5 5 0 01-4-2l-2-3"/></svg></div>
+        <h3>Hands &amp; Feet</h3>
+        <p>Manicures, pedicures and nail care in a hygienic, relaxed setting.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+      <article class="service-card" style="--i:5">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2a5 5 0 00-5 5c0 2 1 3 1 5H8a2 2 0 000 4h8a2 2 0 000-4h0c0-2 1-3 1-5a5 5 0 00-5-5z"/></svg></div>
+        <h3>Men's Grooming</h3>
+        <p>Beard sculpting, shaves and grooming packages for a sharp, put-together look.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+      <article class="service-card" style="--i:6">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 018-1 4 4 0 018 1c0 5.5-7 10-7 10z"/></svg></div>
+        <h3>Women's Grooming</h3>
+        <p>Waxing, threading and skin care designed around comfort and privacy.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+      <article class="service-card" style="--i:7">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2l2 5h5l-4 3.5L16.5 16 12 12.8 7.5 16 9 10.5 5 7h5z"/></svg></div>
+        <h3>Makeup</h3>
+        <p>Everyday, party and bridal makeup by artists trained in long-wear techniques.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+      <article class="service-card" style="--i:8">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 18c2-1 4-3 4-6a4 4 0 118 0c0 3 2 5 4 6"/></svg></div>
+        <h3>Massage</h3>
+        <p>Head, neck and shoulder massage therapies to unwind before or after your service.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Learn More</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     THE URBAN CUTS EXPERIENCE (TIMELINE)
+     ========================================================================= -->
+<section class="experience" style="padding: var(--section-pad) 0;">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">The Urban Cuts Experience</p>
+      <h2>From booking to walking out looking your best</h2>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="timeline-track" aria-hidden="true"></div>
+
+      <div class="timeline-item"><div class="timeline-dot">1</div><div class="timeline-body"><h3>Book Appointment</h3><p>Call, WhatsApp or walk in — we hold a slot that suits your schedule.</p></div></div>
+      <div class="timeline-item"><div class="timeline-dot">2</div><div class="timeline-body"><h3>Meet Your Stylist</h3><p>You're introduced to the specialist best suited to what you need.</p></div></div>
+      <div class="timeline-item"><div class="timeline-dot">3</div><div class="timeline-body"><h3>Consultation</h3><p>A short, honest conversation about the look and result you want.</p></div></div>
+      <div class="timeline-item"><div class="timeline-dot">4</div><div class="timeline-body"><h3>Premium Service</h3><p>Your service is carried out with premium products, at an unhurried pace.</p></div></div>
+      <div class="timeline-item"><div class="timeline-dot">5</div><div class="timeline-body"><h3>Relax</h3><p>A finishing touch — head massage or styling — before you leave the chair.</p></div></div>
+      <div class="timeline-item"><div class="timeline-dot">6</div><div class="timeline-body"><h3>Walk Out Looking Your Best</h3><p>Confident, refreshed, and ready for whatever's next.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     TRANSFORMATIONS GALLERY
+     ========================================================================= -->
+<section style="padding: var(--section-pad) 0; background: var(--beige-dark);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Transformations</p>
+      <h2>Real results from the Urban Cuts chair</h2>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="gallery-item" style="--ar:0.8"><div class="art-panel"><svg viewBox="0 0 24 24" fill="none" stroke="#171410" stroke-width="1.1"><path d="M6 4l6 16M18 4l-6 16"/></svg></div><span class="tag">Haircut</span></div>
+      <div class="gallery-item" style="--ar:1.1"><div class="art-panel dark"><svg viewBox="0 0 24 24" fill="none" stroke="#E7D2A0" stroke-width="1.1"><circle cx="12" cy="12" r="4"/></svg></div><span class="tag">Colour</span></div>
+      <div class="gallery-item" style="--ar:0.9"><div class="art-panel"><svg viewBox="0 0 24 24" fill="none" stroke="#171410" stroke-width="1.1"><path d="M12 2l2 5h5l-4 3.5L16.5 16 12 12.8 7.5 16 9 10.5 5 7h5z"/></svg></div><span class="tag">Makeup</span></div>
+      <div class="gallery-item" style="--ar:1.2"><div class="art-panel dark"><svg viewBox="0 0 24 24" fill="none" stroke="#E7D2A0" stroke-width="1.1"><path d="M12 2a5 5 0 00-5 5c0 2 1 3 1 5H8a2 2 0 000 4h8a2 2 0 000-4h0c0-2 1-3 1-5a5 5 0 00-5-5z"/></svg></div><span class="tag">Grooming</span></div>
+      <div class="gallery-item" style="--ar:1"><div class="art-panel"><svg viewBox="0 0 24 24" fill="none" stroke="#171410" stroke-width="1.1"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zM8 12h8"/></svg></div><span class="tag">Skin</span></div>
+      <div class="gallery-item" style="--ar:0.85"><div class="art-panel dark"><svg viewBox="0 0 24 24" fill="none" stroke="#E7D2A0" stroke-width="1.1"><path d="M7 11V7a2 2 0 114 0v3M11 11V6a2 2 0 114 0v5"/></svg></div><span class="tag">Nail Care</span></div>
+      <div class="gallery-item" style="--ar:1.05"><div class="art-panel"><svg viewBox="0 0 24 24" fill="none" stroke="#171410" stroke-width="1.1"><path d="M12 21s-7-4.5-7-10a4 4 0 018-1 4 4 0 018 1c0 5.5-7 10-7 10z"/></svg></div><span class="tag">Bridal</span></div>
+      <div class="gallery-item" style="--ar:1"><div class="art-panel dark"><svg viewBox="0 0 24 24" fill="none" stroke="#E7D2A0" stroke-width="1.1"><path d="M4 18c2-1 4-3 4-6a4 4 0 118 0c0 3 2 5 4 6"/></svg></div><span class="tag">Spa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     MEET OUR TEAM
+     ========================================================================= -->
+<section style="padding: var(--section-pad) 0;">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Meet Our Team</p>
+      <h2>The hands behind every transformation</h2>
+    </div>
+
+    <div class="team-grid reveal-stagger reveal">
+      <article class="team-card" style="--i:0">
+        <div class="art-panel"><svg viewBox="0 0 24 24" fill="none" stroke="#171410" stroke-width="1.1"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <div class="team-info"><h3>Rohan Deshpande</h3><p class="role">Senior Hair Stylist</p><p class="meta">12 yrs experience<br>Speciality: Precision Cuts</p></div>
+      </article>
+      <article class="team-card" style="--i:1">
+        <div class="art-panel dark"><svg viewBox="0 0 24 24" fill="none" stroke="#E7D2A0" stroke-width="1.1"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <div class="team-info"><h3>Ananya Kulkarni</h3><p class="role">Colour Specialist</p><p class="meta">9 yrs experience<br>Speciality: Balayage &amp; Global Colour</p></div>
+      </article>
+      <article class="team-card" style="--i:2">
+        <div class="art-panel"><svg viewBox="0 0 24 24" fill="none" stroke="#171410" stroke-width="1.1"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <div class="team-info"><h3>Imran Shaikh</h3><p class="role">Men's Grooming Expert</p><p class="meta">10 yrs experience<br>Speciality: Beard Sculpting</p></div>
+      </article>
+      <article class="team-card" style="--i:3">
+        <div class="art-panel dark"><svg viewBox="0 0 24 24" fill="none" stroke="#E7D2A0" stroke-width="1.1"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <div class="team-info"><h3>Priya Nair</h3><p class="role">Makeup Artist</p><p class="meta">8 yrs experience<br>Speciality: Bridal &amp; Party Makeup</p></div>
+      </article>
+      <article class="team-card" style="--i:4">
+        <div class="art-panel"><svg viewBox="0 0 24 24" fill="none" stroke="#171410" stroke-width="1.1"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <div class="team-info"><h3>Sneha Patil</h3><p class="role">Skin &amp; Spa Therapist</p><p class="meta">7 yrs experience<br>Speciality: Facials &amp; De-tan</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     WHY 800+ CLIENTS CHOOSE URBAN CUTS
+     ========================================================================= -->
+<section class="choose-us" style="padding: var(--section-pad) 0;">
+  <div class="container choose-grid">
+    <div class="art-panel dark"><svg viewBox="0 0 24 24" fill="none" stroke="#E7D2A0" stroke-width="1"><path d="M6 4l6 16M18 4l-6 16M4 12h16"/></svg></div>
+
+    <div>
+      <div class="section-head reveal">
+        <p class="eyebrow">Why 800+ Clients Choose Us</p>
+        <h2>Consistency, at every single visit</h2>
+        <p>The reason clients come back isn't one big thing — it's that every small detail is handled the same way, every time.</p>
+      </div>
+
+      <ul class="choose-list reveal-stagger reveal">
+        <li style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Premium Products</li>
+        <li style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Experienced Team</li>
+        <li style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Luxury Interiors</li>
+        <li style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Attention to Detail</li>
+        <li style="--i:4"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Personalised Consultation</li>
+        <li style="--i:5"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Excellent Customer Satisfaction</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     GOOGLE REVIEWS
+     ========================================================================= -->
+<section id="reviews" style="padding: var(--section-pad) 0;">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Google Reviews</p>
+      <h2>141 reviews, one consistent story</h2>
+      <span class="thread-underline" aria-hidden="true"><svg viewBox="0 0 84 10" width="84" height="10"><path d="M2 6c10-8 20 6 30-2s20 6 30-2 18 4 20 0" stroke="#C6A25D" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
+    </div>
+
+    <div class="reviews-grid reveal-stagger reveal">
+      <article class="review-card" style="--i:0">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>Best family salon in Baner, hands down. My whole family — parents, kids — get everything done here now, no more searching around.</p>
+        <div class="review-author"><div class="review-avatar">S</div><div class="who"><strong>Sanika R.</strong><span>Baner</span></div></div>
+      </article>
+      <article class="review-card" style="--i:1">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>Booked a grooming appointment on WhatsApp, was seated right on time. The consultation before the cut made all the difference.</p>
+        <div class="review-author"><div class="review-avatar">A</div><div class="who"><strong>Aditya M.</strong><span>Balewadi</span></div></div>
+      </article>
+      <article class="review-card" style="--i:2">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>Genuinely feels premium — the interiors, the staff, the products used. Worth every rupee compared to other salons nearby.</p>
+        <div class="review-author"><div class="review-avatar">P</div><div class="who"><strong>Priyanka D.</strong><span>Pashan</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     FAQ
+     ========================================================================= -->
+<section style="padding: var(--section-pad) 0; background: var(--beige-dark);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Frequently Asked Questions</p>
+      <h2>Everything before you book</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item open">
+        <button class="faq-q" aria-expanded="true"><span>Do I need an appointment, or can I walk in?</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Walk-ins are welcome, but booking ahead by call or WhatsApp guarantees your preferred time slot and stylist, especially on weekends.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>Is Urban Cuts suitable for the whole family, including kids?</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Yes — we're built as a family salon, with services for men, women and children under one roof, at the same address in Baner.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>Do you offer a private, women-friendly space?</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Yes, our layout and staffing are designed to keep the salon comfortable and private for women, alongside our general services.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>What areas near Baner do you serve?</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Most of our clients travel from Baner, Balewadi, Pashan, Aundh, Sus and Mahalunge — we're centrally placed for all of these areas.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>Is parking available at your Baner location?</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Yes, dedicated parking is available right outside our shop at Nancy Hill View, Baner Annex.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>What hygiene standards do you follow?</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>All tools are sanitised between clients and we use single-use consumables wherever applicable, in line with premium salon hygiene standards.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     CONTACT
+     ========================================================================= -->
+<section id="contact" style="padding: var(--section-pad) 0;">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Visit Us</p>
+      <h2>Come in, or book ahead</h2>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <div class="contact-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s-6-5.5-6-10a6 6 0 1112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></div>
+          <div><h4>Address</h4><p>Shop 10, Nancy Hill View, Baner Annex,<br>Baner, Pune, Maharashtra 411045</p></div>
+        </div>
+        <div class="contact-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.4-1.4a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z"/></svg></div>
+          <div><h4>Phone</h4><p><a href="tel:+918862070100">88620 70100</a></p></div>
+        </div>
+        <div class="contact-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div><h4>Opening Hours</h4><p>Mon – Sun: 9:00 AM – 9:00 PM</p></div>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:+918862070100" class="btn btn-gold">Book Appointment</a>
+          <a href="https://wa.me/918862070100" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=Nancy%20Hill%20View%2C%20Baner%20Annex%2C%20Baner%2C%20Pune%2C%20Maharashtra%20411045&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          title="Urban Cuts location map — Baner, Pune"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Map showing Urban Cuts salon location in Baner, Pune">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================================
+     FOOTER
+     ========================================================================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">URBAN CUTS</div>
+        <p>Shop 10, Nancy Hill View, Baner Annex, Baner, Pune, Maharashtra 411045</p>
+        <div class="footer-social" aria-label="Social media">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M14 9h3V6h-3a3 3 0 00-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9z"/></svg></a>
+          <a href="https://wa.me/918862070100" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M22 12a10 10 0 01-14.6 8.9L3 22l1.2-4.3A10 10 0 1122 12z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li>Hair &amp; Colour</li>
+          <li>Skin Care</li>
+          <li>Men's Grooming</li>
+          <li>Women's Grooming</li>
+          <li>Makeup</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+918862070100">88620 70100</a></li>
+          <li>Baner, Pune 411045</li>
+          <li>Open 9 AM – 9 PM, Daily</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Urban Cuts. All rights reserved.</span>
+      <span>Serving Baner · Balewadi · Pashan · Aundh · Sus · Mahalunge</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/918862070100?text=Hi%20Urban%20Cuts%2C%20I%27d%20like%20to%20book%20an%20appointment" class="float-whatsapp" target="_blank" rel="noopener" aria-label="Chat with Urban Cuts on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1s-1.4-.5-2.6-1.6c-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 8.6 9.5 7.4 9.3 7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.6 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+</a>
+
+<script>
+/* =========================================================================
+   JS 1. NAV: sticky shadow + mobile toggle + smooth-scroll close
+   ========================================================================= */
+(function navModule(){
+  const nav = document.getElementById('siteNav');
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('is-scrolled', window.scrollY > 12);
+  }, { passive: true });
+
+  toggle.addEventListener('click', function(){
+    const isOpen = links.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
+/* =========================================================================
+   JS 2. FAQ ACCORDION
+   ========================================================================= */
+(function faqModule(){
+  const items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+
+    function setState(open){
+      item.classList.toggle('open', open);
+      q.setAttribute('aria-expanded', String(open));
+      a.style.maxHeight = open ? a.scrollHeight + 'px' : '0px';
+    }
+
+    setState(item.classList.contains('open'));
+
+    q.addEventListener('click', function(){
+      setState(!item.classList.contains('open'));
+    });
+  });
+
+  window.addEventListener('resize', function(){
+    document.querySelectorAll('.faq-item.open .faq-a').forEach(function(a){
+      a.style.maxHeight = a.scrollHeight + 'px';
+    });
+  });
+})();
+
+/* =========================================================================
+   JS 3. SCROLL-REVEAL via Intersection Observer (reusable, no libraries)
+   ========================================================================= */
+(function revealModule(){
+  const targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)){
+    targets.forEach(function(t){ t.classList.add('in-view'); });
+    return;
+  }
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(function(t){ io.observe(t); });
+})();
+
+/* =========================================================================
+   JS 4. FOOTER YEAR
+   ========================================================================= */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
