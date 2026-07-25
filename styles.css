@@ -1973,7 +1973,8 @@ grid-template-columns:repeat(5,1fr);
 
     .nav-dropdown.nav-dropdown--open {
     max-height: 800px;
-    overflow: visible;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     }
 
     .nav-dropdown-trigger[aria-expanded="true"] .nav-dropdown-chevron {
