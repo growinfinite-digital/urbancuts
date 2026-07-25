@@ -1972,7 +1972,8 @@ grid-template-columns:repeat(5,1fr);
     }
 
     .nav-dropdown.nav-dropdown--open {
-        max-height: 480px;
+    max-height: 800px;
+    overflow: visible;
     }
 
     .nav-dropdown-trigger[aria-expanded="true"] .nav-dropdown-chevron {
