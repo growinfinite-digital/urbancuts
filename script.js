@@ -17,6 +17,7 @@
         initScrollReveal();
         initCompareSliders();
         initPreloader();
+        initServicesDropdown();
     }
 
     /* -----------------------------------------
@@ -363,6 +364,24 @@ function initPreloader(){
 
     });
 
+}
+/* Services dropdown: hover handles desktop via CSS; this handles
+   the mobile tap-to-expand accordion. */
+function initServicesDropdown() {
+    var triggers = document.querySelectorAll('.nav-dropdown-trigger');
+    if (!triggers.length) return;
+
+    triggers.forEach(function (trigger) {
+        var dropdown = document.getElementById(trigger.getAttribute('aria-controls'));
+        if (!dropdown) return;
+
+        trigger.addEventListener('click', function (event) {
+            event.preventDefault();
+            var isOpen = dropdown.classList.contains('nav-dropdown--open');
+            dropdown.classList.toggle('nav-dropdown--open', !isOpen);
+            trigger.setAttribute('aria-expanded', String(!isOpen));
+        });
+    });
 }
 
 })();
