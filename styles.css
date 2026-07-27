@@ -1,5 +1,5 @@
 /* =========================================================
-   URBAN CUTS — STYLE SHEET
+   Urban Cuts Family Salon — STYLE SHEET
    Premium family salon · Baner, Pune
    Palette: Ink Black / White, with Champagne Gold as a thin
    accent and a single soft-ivory tint used sparingly for
@@ -338,22 +338,28 @@ section[id] {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
     flex-shrink: 1;
     min-width: 0;
 }
+.logo img { background: none; width: 70px; height: auto; flex-shrink: 0; }
+@media (min-width: 480px) { .logo img { width: 100px; } }
 
-.logo img {
-    background: none;
-    width: 120px;
-    height: auto;
+.logo__text {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--color-ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    padding-left: 5px;
+    line-height: 30px;
 }
-
-@media (min-width: 480px) {
-    .logo img {
-        width: 90px;
-    }
-}
-
+@media (min-width: 900px) { .logo__text { font-size: 1.5rem; } }
 .nav-toggle {
     flex-shrink: 0;
 }
@@ -452,10 +458,16 @@ section[id] {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-.header__cta {
+.header__right {
     display: flex;
     align-items: center;
-    gap: var(--space-2xs);
+    gap: var(--space-lg);
+}
+
+.header__cta { display: flex; align-items: center; gap: var(--space-2xs); flex-shrink: 0; }
+
+@media (max-width: 899px) {
+    .header__cta { display: none; }
 }
 
 .header__cta .btn--ghost {
@@ -674,7 +686,7 @@ align-items:center;
 }
 
 /* -----------------------------------------
-   8. WHY URBAN CUTS
+   8. WHY Urban Cuts Family Salon
 ----------------------------------------- */
 .why-us {
             padding-top: 2.5rem;
@@ -1177,7 +1189,7 @@ grid-template-columns:repeat(5,1fr);
 
 } */
 /* -----------------------------------------
-   13. WHY 800+ CLIENTS CHOOSE US
+   13. WHY 1000+ CLIENTS CHOOSE US
 ----------------------------------------- */
 .choose-us {
             padding-top: 2.5rem;
@@ -1972,7 +1984,7 @@ grid-template-columns:repeat(5,1fr);
     }
 
     .nav-dropdown.nav-dropdown--open {
-    max-height: 800px;
+    max-height: 1000px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     }

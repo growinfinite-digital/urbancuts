@@ -1,5 +1,5 @@
 /* =========================================================
-   URBAN CUTS — SITE SCRIPTS
+   Urban Cuts Family Salon — SITE SCRIPTS
    Vanilla JS. No dependencies. No build step required.
 ========================================================= */
 
